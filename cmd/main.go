@@ -22,7 +22,7 @@ func main() {
 	}
 
 	if err := godotenv.Load(); err != nil {
-		logrus.Fatalf("failed to load env : %s", err.Error())
+		logrus.Fatalf("failed to load env \n IT'S NECESSARY FOR DATA BASE ENTRY (PASS): %s", err.Error())
 	}
 	db, err := repository.NewPostgreDB(&repository.Config{
 		Host:     viper.GetString("db.host"),
